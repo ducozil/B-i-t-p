@@ -1,12 +1,15 @@
-#include "sinhvien.h"
+#include <iostream>
+#include "Circle.h"
 
-main(){
-    SinhVien sv1;
-    sv1.setMaSV("1111");
-    sv1.display();
+int main() {
+    double r;
+    std::cout << "Enter the radius of the circle: ";
+    std::cin >> r;
 
-    SinhVien sv2("2222", "Nguyen Van A");
-    sv2.display();
+    Circle c(r);
+    std::cout << "Area: " << c.getArea() << std::endl;
+    std::cout << "Diameter: " << c.getDiameter() << std::endl;
+    std::cout << "Circumference: " << c.getCircumference() << std::endl;
 
     return 0;
 }
